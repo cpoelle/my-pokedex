@@ -9,7 +9,9 @@ const List = ({ pokemons }) => {
 				.map((poke) => {
 					return (
 						<li key={poke.name}>
-							<Link to={`/details/${poke.name}`}>{poke.name}</Link>
+							<Link to={`/details/${poke.name}`} className="list__link">
+								{poke.name}
+							</Link>
 						</li>
 					);
 				})}

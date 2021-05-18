@@ -1,70 +1,193 @@
+Basic css reset stylings
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Todo: Make styles more reusable, add BEM, reorganize component style */
 .App {
-  display: flex;
+	background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+	height: 100vh;
+	display: grid;
+	justify-content: center;
+	align-content: center;
 }
 
-.aside {
-  flex: 0 0 30%;
-  margin-right: 2em;
-  width: 100%;
+.pokedex__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 800px;
+	height: 600px;
+	margin: 0 auto;
+	padding: 12px;
+	background-color: #c33434;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+
+.pokedex__shadow {
+	position: absolute;
+	bottom: 12px;
+	left: 12px;
+	width: 30%;
+	height: 20px;
+	background: rgb(195, 52, 52);
+	background: linear-gradient(
+		0deg,
+		rgba(195, 52, 52, 1) 14%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
+.list {
+	flex: 0 0 30%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.list > ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.list > ul > li {
+	background-color: #fff;
+	padding: 8px 16px;
+	margin: 16px;
+	border-radius: 5px;
+}
+
+.list__link {
+	color: #000;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.list__link:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.list__link:link {
+	color: #000;
+	text-decoration: none;
+}
+
 .details {
-  flex: 1 1 70%;
-}
-.detailsContainer {
-  position: sticky;
-  top: 0;
-}
-
-ul {
-  list-style: none;
-  width: 100%;
-  padding: 1rem 1rem;
-  background-color: rgb(227, 227, 227);
-  margin: 0;
+	flex: 1 1 70%;
+	align-self: start;
+	color: #333;
+	background-color: #fff;
+	padding: 12px;
+	margin: 16px;
+	border-radius: 5px;
 }
 
-li {
-  margin: 0.5em;
-  padding: 0.5em;
-  color: rgb(0, 0, 0);
-  border: 1px solid;
-  border-radius: 2px;
-  cursor: pointer;
-  background-color: #fff;
+.details__title,
+.details__info {
+	text-transform: capitalize;
 }
 
-li a {
-  color: #000;
-  text-decoration: none;
+.details__title {
+	text-align: center;
+	font-size: 48px;
+	font-weight: bold;
 }
 
-li a:visited {
-  color: #000;
-  text-decoration: none;
+.details__list {
+	list-style: none;
+	padding-inline-start: 0;
+	margin: 0;
 }
 
-li a:link {
-  color: #000;
-  text-decoration: none;
+.details__image {
+	margin: 0 auto;
+	width: 150px;
+	height: auto;
 }
 
-li a:hover {
-  color: rgb(155, 1, 1);
-  text-decoration: underline;
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-li:first-child {
-  margin-top: 0;
-}
-
-.poke-title {
-  text-transform: uppercase;
-}
-
-.poke-details {
-  background-color: rgb(72, 72, 72);
-  color: #fff;
-  text-align: center;
-  padding: 3rem 0;
-  height: 100vh;
+.logo > img {
+	max-width: 400px;
+	margin-bottom: 32px;
 }

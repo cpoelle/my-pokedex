@@ -23,15 +23,28 @@ const Details = ({ list }) => {
 	return (
 		<div>
 			{pokemonDetails && (
-				<div className="poke-details">
-					<h2 className="poke-title">{pokemonDetails.name}</h2>
-					<p>Weight: {pokemonDetails.weight}</p>
-					<p>Height: {pokemonDetails.height}</p>
-					<p>Id: {pokemonDetails.id}</p>
+				<div>
+					<h1 className="details__title">{pokemonDetails.name}</h1>
 					<img
 						src={pokemonDetails.sprites.front_default}
 						alt={pokemonDetails.name}
+						className="details__image"
 					></img>
+					<p>Number: {pokemonDetails.id}</p>
+
+					<p>Weight: {pokemonDetails.weight / 10 + " kg"}</p>
+					<p>Height: {pokemonDetails.height * 10 + " cm"}</p>
+
+					{/* Todo: make stats to own component */}
+					<ul className="details__list">
+						{pokemonDetails.stats.map((stat, index) => {
+							return (
+								<li key={index} className="details__info">
+									{stat.stat.name + ": " + stat.base_stat}{" "}
+								</li>
+							);
+						})}
+					</ul>
 				</div>
 			)}
 		</div>
