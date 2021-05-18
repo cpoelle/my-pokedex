@@ -1,0 +1,70 @@
+.App {
+  display: flex;
+}
+
+.aside {
+  flex: 0 0 30%;
+  margin-right: 2em;
+  width: 100%;
+}
+.details {
+  flex: 1 1 70%;
+}
+.detailsContainer {
+  position: sticky;
+  top: 0;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 1rem 1rem;
+  background-color: rgb(227, 227, 227);
+  margin: 0;
+}
+
+li {
+  margin: 0.5em;
+  padding: 0.5em;
+  color: rgb(0, 0, 0);
+  border: 1px solid;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+li a {
+  color: #000;
+  text-decoration: none;
+}
+
+li a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+li a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: rgb(155, 1, 1);
+  text-decoration: underline;
+}
+
+li:first-child {
+  margin-top: 0;
+}
+
+.poke-title {
+  text-transform: uppercase;
+}
+
+.poke-details {
+  background-color: rgb(72, 72, 72);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0;
+  height: 100vh;
+}
