@@ -27,6 +27,11 @@ const Details = ({ list }) => {
 					<h2 className="poke-title">{pokemonDetails.name}</h2>
 					<p>Weight: {pokemonDetails.weight}</p>
 					<p>Height: {pokemonDetails.height}</p>
+					<p>Id: {pokemonDetails.id}</p>
+					<img
+						src={pokemonDetails.sprites.front_default}
+						alt={pokemonDetails.name}
+					></img>
 				</div>
 			)}
 		</div>
