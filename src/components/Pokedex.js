@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Intro from "./Intro";
 import List from "./List";
 import Details from "./Details";
@@ -34,12 +34,14 @@ function Pokedex() {
 					)}
 				</section>
 				<section className="details">
-					<Route path="/">
-						<Intro />
-					</Route>
-					<Route path="/details/:name">
-						<Details list={pokemon}></Details>
-					</Route>
+					<Switch>
+						<Route path="/" exact>
+							<Intro />
+						</Route>
+						<Route path="/details/:name">
+							<Details list={pokemon}></Details>
+						</Route>
+					</Switch>
 				</section>
 				<div className="pokedex__shadow"></div>
 			</div>
