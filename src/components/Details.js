@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../App.css";
+import style from "./Details.module.css";
 
 const Details = ({ list }) => {
 	const [pokemonDetails, setPokemonsDetails] = useState(null);
@@ -24,11 +24,11 @@ const Details = ({ list }) => {
 		<div>
 			{pokemonDetails && (
 				<div>
-					<h1 className="details__title">{pokemonDetails.name}</h1>
+					<h1 className={style.details__title}>{pokemonDetails.name}</h1>
 					<img
 						src={pokemonDetails.sprites.front_default}
 						alt={pokemonDetails.name}
-						className="details__image"
+						className={style.details__image}
 					></img>
 					<p>Number: {pokemonDetails.id}</p>
 
@@ -36,10 +36,10 @@ const Details = ({ list }) => {
 					<p>Height: {pokemonDetails.height * 10 + " cm"}</p>
 
 					{/* Todo: make stats to own component */}
-					<ul className="details__list">
+					<ul className={style.details__list}>
 						{pokemonDetails.stats.map((stat, index) => {
 							return (
-								<li key={index} className="details__info">
+								<li key={index} className={style.details__info}>
 									{stat.stat.name + ": " + stat.base_stat}{" "}
 								</li>
 							);

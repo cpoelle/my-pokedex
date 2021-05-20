@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import style from "./List.module.css";
 
 const List = ({ pokemons }) => {
 	return (
@@ -9,7 +10,7 @@ const List = ({ pokemons }) => {
 				.map((poke) => {
 					return (
 						<li key={poke.name}>
-							<Link to={`/details/${poke.name}`} className="list__link">
+							<Link to={`/details/${poke.name}`} className={style.list__link}>
 								{poke.name}
 							</Link>
 						</li>

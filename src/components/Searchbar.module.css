@@ -1,0 +1,19 @@
+.searchbar {
+	margin: 16px 0;
+	padding: 12px 0;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+}
+
+.searchbar__inner {
+	border-radius: 25px;
+	height: 28px;
+	margin: 0 28px;
+	width: 600px;
+	padding: 4px 12px;
+}
+
+.searchbar__inner:focus {
+	outline: none;
+}
