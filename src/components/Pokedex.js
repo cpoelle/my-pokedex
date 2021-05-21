@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Intro from "./Intro";
 import List from "./List";
 import Details from "./Details";
 import style from "./Pokedex.module.css";
@@ -27,24 +26,20 @@ function Pokedex() {
 	return (
 		<Router>
 			<div className={style.pokedex__container}>
-				<section className={style.pokedex__list}>
-					{isLoading === true ? (
-						<p>Loading ...</p>
-					) : (
-						<List pokemons={pokemon} />
-					)}
-				</section>
-				<section className={style.pokedex__details}>
-					<Switch>
-						<Route path="/" exact>
-							<Intro />
-						</Route>
-						<Route path="/details/:name">
+				<Switch>
+					<Route path="/" exact>
+						{isLoading === true ? (
+							<p>Loading ...</p>
+						) : (
+							<List pokemons={pokemon} />
+						)}
+					</Route>
+					<Route path="/details/:name">
+						<section className={style.pokedex__details}>
 							<Details list={pokemon}></Details>
-						</Route>
-					</Switch>
-				</section>
-				<div className={style.pokedex__shadow}></div>
+						</section>
+					</Route>
+				</Switch>
 			</div>
 		</Router>
 	);

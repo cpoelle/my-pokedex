@@ -1,15 +1,5 @@
-.list__link {
-	color: #000;
-	text-decoration: none;
-	text-transform: capitalize;
-}
-
-.list__link:visited {
-	color: #000;
-	text-decoration: none;
-}
-
-.list__link:link {
-	color: #000;
-	text-decoration: none;
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
