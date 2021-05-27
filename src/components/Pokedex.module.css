@@ -3,7 +3,7 @@
 	overflow: hidden;
 	overflow-y: scroll;
 	width: 800px;
-	height: 500px;
+	max-height: 500px;
 	margin: 0 auto;
 	padding: 12px;
 	background-color: #c33434;
@@ -15,10 +15,11 @@
 .pokedex__details {
 	align-self: start;
 	color: #333;
-	background-color: #fff;
+	background-color: #f9f9f9;
 	padding: 12px;
 	margin: 16px;
 	border-radius: 5px;
+	position: relative;
 }
 
 .pokedex__shadow {

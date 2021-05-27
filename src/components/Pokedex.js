@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import List from "./List";
-import Details from "./Details";
+import Details from "../pages/Details";
 import style from "./Pokedex.module.css";
+import BackButton from "../components/BackButton.js";
 
 function Pokedex() {
 	const initData = JSON.parse(localStorage.getItem("Pokemons")) || [];
@@ -36,6 +37,7 @@ function Pokedex() {
 					</Route>
 					<Route path="/details/:name">
 						<section className={style.pokedex__details}>
+							<BackButton />
 							<Details list={pokemon}></Details>
 						</section>
 					</Route>

@@ -1,0 +1,37 @@
+.container {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+
+.link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: color 300ms ease-out;
+	font-weight: bold;
+}
+
+.link:hover {
+	color: #c33434;
+	transition: color 300ms ease-out;
+}
+
+.link img {
+	transition: transform 300ms ease-out;
+}
+
+.link span {
+	text-transform: capitalize;
+}
+
+.link:hover img {
+	transform: scale(1.2);
+	transition: transform 300ms ease-out;
+}
+
+.ball {
+	width: 24px;
+	display: inline-block;
+	margin-right: 8px;
+}

@@ -1,0 +1,25 @@
+.details__title,
+.details__info {
+	text-transform: capitalize;
+}
+
+.details__title {
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+
+.details__image {
+	margin: 16px auto;
+	width: 150px;
+	height: auto;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.details__image img {
+	width: 100%;
+}
