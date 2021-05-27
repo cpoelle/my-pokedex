@@ -1,0 +1,26 @@
+.card {
+	background-color: #fff;
+	min-width: 100px;
+	min-height: 100px;
+	margin: 16px;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+.title {
+	text-align: center;
+	display: block;
+	text-transform: capitalize;
+	font-size: 12px;
+	color: #333;
+}
+
+.image {
+	margin: 0 auto;
+	width: 100%;
+}
