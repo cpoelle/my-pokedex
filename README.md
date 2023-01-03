@@ -1,10 +1,16 @@
-# my-pokedex
+# WIP: My React Pokédex
 
-WIP: react pokédex with pokéAPI (https://pokeapi.co/)
+I startet to create a react pokédex web application with the wonderfull pokéAPI (https://pokeapi.co/). This project should help me to apply and practice the React features and concepts on an example. Unfortunately, I haven't had the time to complete the app and add the features I wanted. But it will come ... Gotta catch'em all.
+
+Remaining features / Open Tasks: 
+- Searchbar with filter functionality
+- Pokémon creator
+- responsivness vor all devices
+- finalized design
+
 ![My Image](public/assets/preview.png)
-
-todo: searchbar, responsive, design/styling, functionalities like map location etc.
 
 Source of pokemon banner: 
 https://pngimg.com/image/27638
+
 
